@@ -8,8 +8,8 @@ This repository is about the titanic dataset which builds a decision tree model 
 |---|---|
 | `titanic.ipynb` | Analysis notebook |
 | `titanic.csv` | Raw Titanic dataset |
+| `titanic_cleaned.csv` | Cleaned Titanic dataset|
 | `data_dictionary.md` | Column-by-column description of the dataset |
-| `findings_summary.md` | Description of machine learning model that predicts survival based on parameters |
 | `requirements.txt` | Python library versions needed to reproduce this work |
 
 ## Dataset
@@ -25,8 +25,12 @@ This repository is about the titanic dataset which builds a decision tree model 
    pip install -r requirements.txt
    ```
 3. Open `titanic.ipynb` in Jupyter or VS Code.
-4. Input the specific attributes for the individual
+4. Input the specific attributes for the individual in the final cell. Example: 
+    ```bash 
+    # Pclass=2, Age=30, SibSp=0, Parch=0, Fare=20, Sex_n=0 (female), Embarked_n=2 (S)
+    sample = pd.DataFrame([{
+        'Pclass': 2, 'Age': 30, 'SibSp': 0, 'Parch': 0,
+        'Fare': 20, 'Sex_number': 0, 'Embarked_number': 2
+    }])
+    ```
 5. Run all cells from top to bottom (**Restart Kernel + Run All**) and the output will be if the individual survived or not based on their specific attributes
-
-## Summary of findings
-*(See `findings_summary.md` for the full write-up.)*
